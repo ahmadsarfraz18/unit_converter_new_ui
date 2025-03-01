@@ -37,6 +37,12 @@ st.markdown("""
         .convert-btn:hover {
             background-color: #0056b3;
         }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -73,3 +79,6 @@ if st.sidebar.button("Convert", key="convert_button"):
         st.markdown(f"<div class='result-box'>{values} {from_unit} is equal to <strong>{result:.3f} {to_unit}</strong></div>", unsafe_allow_html=True)
     else:
         st.error("Conversion not possible between selected units!")
+
+# Footer
+st.markdown("<p class='footer'>Created with ❤️ by <strong>Mahar Ahmad Sarfraz</strong></p>", unsafe_allow_html=True)
